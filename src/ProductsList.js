@@ -81,17 +81,6 @@ export default function ProductsList() {
 
             <h2 className={"text-center my-4"}><b>{t("Sun-system-planets")}</b></h2>
 
-            {/*{(!products || products.length < 1) && <div style={{fontWeight: 700, color: "rebeccapurple"}}>*/}
-            {/*    Šiuo metu produktų nėra, prašome įterpti*/}
-            {/*</div>}*/}
-
-            {/*{products && products.map((product, index) => (*/}
-            {/*    <div key={index}>*/}
-            {/*        Produkto pavadinimas: <b>{product.name}</b> ({product.price} EUR), kiekis: <b>{product.quantity}</b>*/}
-            {/*        /!*<button onClick={() => handleDelete(product)}>Ištrinti</button>*!/*/}
-            {/*    </div>*/}
-            {/*))}*/}
-
             {loading && <div className={"d-flex justify-content-center"}>
                 <div className="spinner-border text-primary" role="status">
                     <span className="visually-hidden">Loading...</span>

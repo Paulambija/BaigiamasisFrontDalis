@@ -138,9 +138,13 @@ function ProductDetail() {
                         <p className="alert alert-danger">{fetchError}</p> :
                         <>
                             <h1 className="text-center h1"><b>{ product.name }</b></h1>
-
                             <h4><b>Aprašymas:</b></h4>
                             <h5>{product.description}</h5>
+                            {/*<button
+                                type="submit"
+                                className="btn btn-primary align-self-center">
+                                Edit
+                            </button>*/}
                             <h4>Comments:</h4>
                             { product.comments?.length ?
                                 <table className="table">
@@ -156,7 +160,7 @@ function ProductDetail() {
                                         <td>{comment.text}</td>
                                         <td>{comment.name}</td>
                                         <td>
-                                            {!isAdmin && <button className="btn btn-info" onClick={() => handleEdit(comment)}>Edit</button>}
+                                            {isAdmin && <button className="btn btn-info" onClick={() => handleEdit(comment)}>Edit</button>}
                                             &nbsp;&nbsp;&nbsp;&nbsp;
                                             <button className="btn btn-danger" onClick={() => handleDelete(comment.id)}>Delete</button>
                                         </td>
@@ -214,6 +218,7 @@ function ProductDetail() {
                                             className="btn btn-primary align-self-center">
                                             Edit comment
                                         </button>
+
                                     </form>
                                     <hr/>
 
@@ -271,7 +276,7 @@ function ProductDetail() {
 
 
                             <div className="mt-3">
-                                <Link to={"/"} >Go back to all planets</Link>
+                                <Link to={"/"} >BACK</Link>
                             </div>
                         </>
                     }

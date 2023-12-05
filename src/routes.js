@@ -19,5 +19,6 @@ export const routes = {
         <Route key={1} path="products-new" element={<NewProduct/>} />,
         <Route key={2} path="todos" element={<TodoList/>} />,
         <Route key={3} path="product-details/:id" element={<ProductDetail/>} />
+
     ],
 };
